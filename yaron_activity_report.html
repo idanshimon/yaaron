@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaron Activity Report (Future-free)</title>
+  <style>
+    :root { --bg:#0b0f14; --card:#121822; --muted:#8ea0b5; --text:#dfe7f1; --accent:#5eb1ff; }
+    * { box-sizing: border-box; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background: var(--bg); color: var(--text); }
+    header { padding: 28px 24px 8px; }
+    h1 { margin: 0; font-size: 28px; letter-spacing: 0.2px; }
+    .sub { color: var(--muted); margin-top: 6px; }
+    main { padding: 12px 24px 40px; }
+    .grid { display: grid; gap: 18px; }
+    @media (min-width: 780px) { .grid.cols-2 { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1080px) { .grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; } .grid.cols-4 { grid-template-columns: repeat(4, 1fr); } }
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 16px; }
+    h2 { font-size: 18px; margin: 0 0 12px; }
+    h3 { font-size: 16px; margin: 0 0 6px; color: var(--accent); }
+    figure { margin: 0; }
+    figcaption { color: var(--muted); font-size: 13px; margin-top: 8px; }
+    img { width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    th { color: var(--muted); font-weight: 600; }
+    footer { color: var(--muted); font-size: 13px; padding: 16px 24px 28px; }
+    .insights .card p { margin: 0; font-size: 15px; }
+    .issues { margin-top: 12px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Yaron Activity Report</h1>
+    <div class="sub">Future-dated messages removed. Participant: <strong>Yaron Meiner</strong>. Date range: 2024-05-11 – 2025-08-15.</div>
+    <div class="issues"><strong>Notes</strong><ul><li>Excluded 166 future-dated messages (after 2025-08-16) from all charts and tables.</li></ul></div>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Quick Insights</h2>
+      
+<div class="grid insights">
+  <div class="card"><h3>Total</h3><p><strong>27694</strong> messages</p></div>
+  <div class="card"><h3>Coverage</h3><p>2024-05-11 – 2025-08-15 (<strong>462</strong> days)</p></div>
+  <div class="card"><h3>Active Days</h3><p><strong>415</strong> days posted</p></div>
+  <div class="card"><h3>Avg / Active Day</h3><p><strong>66.73</strong> msgs</p></div>
+  <div class="card"><h3>Avg / Calendar Day</h3><p><strong>59.94</strong> msgs</p></div>
+  <div class="card"><h3>Busiest Day</h3><p><strong>2025-01-10</strong> — 449 msgs</p></div>
+  <div class="card"><h3>Peak Hour</h3><p><strong>15:00</strong> — 2746 msgs</p></div>
+  <div class="card"><h3>Most Active Weekday</h3><p><strong>Monday</strong> — 5177 msgs</p></div>
+</div>
+
+    </section>
+
+    <section class="grid cols-2">
+      <div class="card">
+        <h2>Messages per Day</h2>
+        <figure>
+          <img src="yaron_messages_per_day.png" alt="Messages per day" />
+          <figcaption>Daily volume over time.</figcaption>
+        </figure>
+      </div>
+      <div class="card">
+        <h2>Cumulative Messages</h2>
+        <figure>
+          <img src="yaron_cumulative_messages.png" alt="Cumulative messages" />
+          <figcaption>Running total; steeper slopes indicate bursts of activity.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="grid cols-2" style="margin-top:18px;">
+      <div class="card">
+        <h2>Messages by Hour</h2>
+        <figure>
+          <img src="yaron_messages_by_hour.png" alt="Messages by hour of day" />
+          <figcaption>When during the day Yaron tends to send messages.</figcaption>
+        </figure>
+      </div>
+      <div class="card">
+        <h2>Messages by Weekday</h2>
+        <figure>
+          <img src="yaron_messages_by_weekday.png" alt="Messages by weekday" />
+          <figcaption>Which weekdays are most active.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:18px;">
+      <h2>Weekday × Hour Heatmap</h2>
+      <figure>
+        <img src="yaron_heatmap_weekday_hour.png" alt="Heatmap: weekday by hour" />
+        <figcaption>Darker areas indicate higher message volume for that weekday/hour slot.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card" style="margin-top:18px;">
+      <h2>Top 10 Busiest Days</h2>
+      <table>
+        <thead><tr><th>Date</th><th>Messages</th></tr></thead>
+        <tbody>
+          <tr><td>2025-01-10</td><td>449</td></tr><tr><td>2025-08-02</td><td>337</td></tr><tr><td>2025-07-03</td><td>331</td></tr><tr><td>2025-06-21</td><td>291</td></tr><tr><td>2025-06-24</td><td>272</td></tr><tr><td>2025-07-06</td><td>271</td></tr><tr><td>2025-07-30</td><td>270</td></tr><tr><td>2025-01-16</td><td>261</td></tr><tr><td>2024-11-05</td><td>256</td></tr><tr><td>2025-03-21</td><td>253</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    Generated from your WhatsApp export with per-file date-format detection and future-message filtering.
+  </footer>
+</body>
+</html>
